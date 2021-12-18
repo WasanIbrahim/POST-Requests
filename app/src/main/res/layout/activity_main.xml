@@ -9,17 +9,18 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mainRV"
-        android:layout_width="match_parent"
-        android:layout_height="582dp"
+        android:layout_width="410dp"
+        android:layout_height="487dp"
+        android:layout_marginBottom="3dp"
         app:layout_constraintBottom_toTopOf="@+id/nameText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/nameText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
         android:background="#FFFFFF"
         android:backgroundTint="#FFFFFF"
         android:hint="Enter your name"
@@ -31,11 +32,24 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+
+        android:id="@+id/postButton"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="2dp"
+        android:text="POST"
+        app:layout_constraintBottom_toTopOf="@+id/updateDeleteButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <EditText
         android:id="@+id/locationText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
+        android:layout_marginBottom="8dp"
         android:background="#FFFFFF"
         android:backgroundTint="#FFFFFF"
         android:hint="Enter your location"
@@ -44,14 +58,15 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/postButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"></EditText>
 
     <Button
-
-        android:id="@+id/postButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="POST"
+        android:id="@+id/updateDeleteButton"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="31dp"
+        android:text="Update/Delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

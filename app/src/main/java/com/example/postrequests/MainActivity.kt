@@ -1,5 +1,6 @@
 package com.example.postrequests
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -35,6 +36,10 @@ class MainActivity : AppCompatActivity() {
             postAPI()
             binding.nameText.text = null
             binding.locationText.text = null
+        }
+        binding.updateDeleteButton.setOnClickListener {
+            val intent = Intent(this, updateDeleteActivity::class.java)
+            startActivity(intent)
         }
 
     }
@@ -75,7 +80,7 @@ class MainActivity : AppCompatActivity() {
 
     //postong
     fun postAPI() {
-        apiInterface?.postTest(TestItem(binding.nameText.text.toString(), binding.locationText.text.toString()))?.enqueue(object : Callback<TestItem> {
+        apiInterface?.postTest(TestItem(binding.nameText.text.toString(), binding.locationText.text.toString(),404))?.enqueue(object : Callback<TestItem> {
             override fun onResponse(call: Call<TestItem>, response: Response<TestItem>) {
 
                 Log.d("MAIN", "Successfully posted")
@@ -89,6 +94,8 @@ class MainActivity : AppCompatActivity() {
         })
 
     }
+
+
 
 }
 
